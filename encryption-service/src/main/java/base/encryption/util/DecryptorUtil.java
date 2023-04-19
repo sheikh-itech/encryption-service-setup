@@ -31,7 +31,7 @@ public class DecryptorUtil {
 	
 	public void init(String password, String encKey) {
 		try {
-			if(this.cipher!=null && prevEncKey==encKey)
+			if(this.cipher!=null && prevEncKey!=null && prevEncKey.equals(encKey))
 				return;
 			
 			prevEncKey = encKey;

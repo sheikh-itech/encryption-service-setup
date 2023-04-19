@@ -24,7 +24,8 @@ export class AppComponent {
     let encUser = {
       field: '',
       username: this.user.username,
-      password: this.user.password
+      password: this.user.password,
+      landmark: "Bhopal"
     };
 
     let encObj: any = this.enc.encryptObject(encUser);
@@ -32,7 +33,8 @@ export class AppComponent {
     encUser = {
       field: encObj.encKey,
       username: encObj.object.username,
-      password: encObj.object.password
+      password: encObj.object.password,
+      landmark: encObj.object.landmark
     };
 
     this.http.postApi(environment.decrypt, encUser)

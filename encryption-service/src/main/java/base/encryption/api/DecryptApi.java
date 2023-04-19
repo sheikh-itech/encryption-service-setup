@@ -28,7 +28,7 @@ public class DecryptApi {
 		res.setStatus(true);
 		
 		this.util.init(null, user.getField());
-		
+		user.setField(null);
 		this.util.decryptObjectFields(user);
 		res.setData(user);
 		
